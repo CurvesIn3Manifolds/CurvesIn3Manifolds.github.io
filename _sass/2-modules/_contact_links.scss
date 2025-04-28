@@ -1,0 +1,44 @@
+.contact-links {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0px;
+
+	gap: 40px;
+
+	img {
+		min-height: 40px;
+		max-height: 40px;
+		animation: offHoverLink .3s ease-in-out;
+	}
+	img:hover {
+		transform: scale(1.2);
+		animation: onHoverLink .2s ease-in-out;
+	}
+
+	@include media-query($on-finger) {
+		gap: 15px;
+	}
+}
+
+@keyframes onHoverLink {
+	0% {transform: scale(1);}
+	70% {transform: scale(1.2);}
+	100% {transform: scale(1.2);}
+}
+
+@keyframes offHoverLink {
+	0% {transform: scale(1.2);}
+	70% {transform: scale(1);}
+	100% {transform: scale(1);}
+}
+
+[data-theme="dark"] {
+	.contact-links {
+		img {
+			filter: grayscale(100%) brightness(0%) invert(100%);
+		}
+	}
+}
+

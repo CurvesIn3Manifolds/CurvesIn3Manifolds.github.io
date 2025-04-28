@@ -1,0 +1,158 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css">
+
+	<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %} Home | {{ site.title }}{% endif %}</title>
+	<meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}'>
+
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!--
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	-->
+
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+	<!--Cookies-->
+	<script>
+		function setCookie(cname, cvalue, exdays) {
+		  const d = new Date();
+		  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		  let expires = "expires="+d.toUTCString();
+		  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+
+		function getCookie(cname) {
+		  let name = cname + "=";
+		  let ca = document.cookie.split(';');
+		  for(let i = 0; i < ca.length; i++) {
+		    let c = ca[i];
+		    while (c.charAt(0) == ' ') {
+		      c = c.substring(1);
+		    }
+		    if (c.indexOf(name) == 0) {
+		      return c.substring(name.length, c.length);
+		    }
+		  }
+		  return "";
+		}
+	</script>
+
+
+	<!-- Analytics -->
+	{%- if jekyll.environment == 'production' and site.google_analytics -%}
+	  {%- include google-analytics.html -%}
+	{%- endif -%}
+
+	<!-- Footnotes -->
+	{% if page.footnotes %}
+		<script type="text/javascript" src="{{site.baseurl}}/js/footnote.js"></script>
+	{% endif %}
+
+	<!-- Lightbox -->
+	{% if page.lightbox %}
+		<script type="text/javascript" src="{{ site.baseurl }}/js/lightbox.js" defer></script>
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/lightbox.css">
+	{% endif %}
+
+	{% if page.jquery %}
+		<script src="//code.jquery.com/jquery-2.1.0.js"></script>
+	{% endif %}
+
+	{% if page.theorem %}
+		<script src='{{site.baseurl}}/js/theorem.js' defer></script>
+	{% endif %}
+
+	<!-- MathJax -->
+	{% if page.tex %}
+		<script type="text/javascript">
+			window.MathJax = {
+				tex: {
+					processEscapes: true,
+					processEnvironments: true,
+					packages: ['base','ams', 'configmacros'],
+					inlineMath: [['$', '$']],
+					displayMath: [['$$', '$$'],['\\(','\\)'],['\\[','\\]']],
+					tags: 'ams',
+					macros: {
+						real: "{\\mathbb{R}}",
+						integ: "{\\mathbb{Z}}",
+						mod: ["{\\mathbb{Z}_{#1}",1],
+						complex: "{\\mathbb{C}}",
+						rat: "{\\mathbb{Q}}",
+						irat: "{\\mathbb{R} \\setminus \\mathbb{Q}",
+						real: "{\\mathbb{R}}",
+						real: "{\\mathbb{R}}",
+
+						paren: ["{\\left(#1\\right)}", 1],
+						sbrak: ["{\\left[#1\\right]}", 1],
+						cbrak: ["{\\left\\{#1\\right\\}}", 1],
+
+						ceil: ["{\\left\\lceil #1 \\right\\rceil}", 1],
+						floor: ["{\\left\\lfloor #1 \\right\\rfloor}", 1],
+						abs: ["{\\left\\lvert #1 \\right\\rvert}", 1],
+						abrak: ["{\\left\\langle #1 \\right\\rangle}", 1],
+						bra: ["{\\left\\langle #1 \\right\\rvert}"],
+						ket: ["{\\left\\lvert #1 \\right\\rangle}"],
+						braket: ["{\\left\\langle #1 \\left.\\right\\lvert #2 \\right\\rangle}" , 2],
+						tens: ["\\stackrel{\\leftrightarrow}{#1}" , 1],
+
+						jand: ["{\\quad\\text{and}\\quad}"],
+						jor: ["{\\quad\\text{or}\\quad}"],
+						"for" : ["{\\quad\\text{for }\\,}"],
+
+						ieval: ["{\\Bigg|^{#2}_{#1}}", 2],
+						deval: ["{\\bigg|_{#1}}" ,1],
+
+						diff: ["{\\frac{d#1}{d#2}}", 2],
+						pdiff: ["{\\frac{\\partial#1}{\\partial#2}}", 2]
+					}
+				},
+				loader: {load: ['ui/menu', '[tex]/ams','[tex]/configmacros']},
+			};
+		</script>
+		<script type="text/javascript" id="MathJax-script" async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+	{% endif %}
+
+	<!-- Theme Config -->
+	<script>
+		const toggleTheme = new Event("toggle-theme");
+		const updateTheme = new Event("update-theme");
+
+		const htmlElement = document.querySelector("html");
+
+		function setDataTheme() {
+			if(htmlElement.getAttribute('data-theme') == "dark") {
+				htmlElement.setAttribute('data-theme', 'light');
+				setCookie("data-theme", "light", 7);
+			}
+			else {
+				htmlElement.setAttribute('data-theme', 'dark');
+				setCookie("data-theme", "dark", 7);
+			}
+		}
+
+		htmlElement.addEventListener("toggle-theme", (e) => {
+			setDataTheme();
+
+			htmlElement.dispatchEvent(updateTheme);
+		});
+
+		if(getCookie('data-theme') === 'light');
+		else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ||
+			getCookie('data-theme') === 'dark'
+		)
+			setDataTheme();
+
+	</script>
+</head>

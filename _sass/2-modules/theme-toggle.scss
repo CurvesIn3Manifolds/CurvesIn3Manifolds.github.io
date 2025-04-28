@@ -1,0 +1,50 @@
+.theme-toggle {
+	position: fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	left: 20px;
+	bottom: 20px;
+
+	animation: offHoverLink .3s ease-in-out;
+
+	&:hover {
+		transform: scale(1.2);
+		animation: onHoverLink .2s ease-in-out;
+	}
+
+	button {
+		display: flex;
+
+		background: color(base-background-color);
+		border-radius: 20px;
+
+		filter: drop-shadow(2.5px 2.5px 2.5px color(toggle-shadow-color));
+
+		min-height: 25px;
+		min-width: 25px;
+
+		padding: 10px;
+
+
+	}
+
+	@include media-query($on-palm) {
+		left: 15px;
+		bottom: 15px;
+	}
+}
+
+@keyframes onHoverLink {
+	0% {transform: scale(1);}
+	70% {transform: scale(1.2);}
+	100% {transform: scale(1.2);}
+}
+
+@keyframes offHoverLink {
+	0% {transform: scale(1.2);}
+	70% {transform: scale(1);}
+	100% {transform: scale(1);}
+}

@@ -1,0 +1,43 @@
+.post-box {
+	padding: 0.7em 0px;
+
+	&:last-child {
+		border: 0px;
+	}
+
+	.post-info-box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		font-size: 0.9em;
+		color: color(unem-text-color);
+		text-align: right;
+
+		margin-top: 10px;
+
+		.post-data-box {
+			font-size: 0.9em;
+		}
+
+		.post-tag-wrapper {
+			font-size: 0.8em;
+			margin: 0px;
+			align-items: flex-start;
+		}
+
+		.post-date-info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			gap: 5px;
+		}
+
+		.post-info-details {
+			color: color(text-color);
+		}
+	}
+}

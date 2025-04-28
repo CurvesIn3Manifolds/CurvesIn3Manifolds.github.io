@@ -1,0 +1,35 @@
+<div class="post-box">
+	<h4><a href="{{ include.post.url | relative_url }}">{{ post.title }}</a></h4>
+
+	<div class="post-detail-info">{{include.post.description}} </div>
+	<div class="post-info-box">
+		<span class="tag-wrapper">
+		  	{% for tag in include.post.tags %}
+				<span class="tag-box"> {{tag}} </span>
+		  	{% endfor %}
+		</span>
+   	   	<span class="post-data-box">
+			<div class="post-date-info">
+		 	 	{% if include.post.revised %}
+		 	 		{{- site.data.locales[lang].post.updated -}}{{' '}}
+					<span class="post-info-details">
+						{{include.post.revised | date: "%B %d, %Y" }}
+					</span>
+		 	 		<span style="font-size: 0.6em">&bull;</span>
+		 	 	{% endif %}
+		 		{{- site.data.locales[lang].post.posted -}} {{' '}}
+					<span class="post-info-details">
+						{{include.post.date | date: "%B %d, %Y" }}
+					</span>
+		 	 </div>
+		 	 <div class="post-author-info">
+	  			{{- site.data.locales[lang].post.written_by -}}
+				<span class="post-detail-info">{{' '}}
+					<span class="post-info-details">
+						{{include.post.author}}
+					</span>
+</span>
+	 		</div>
+   		</span>
+	</div>
+</div>

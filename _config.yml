@@ -1,0 +1,26 @@
+title: FIX ME
+site-title: FIX ME
+subtitle: >- # this means to ignore newlines until "baseurl:"
+  FIX ME
+description: >- # this means to ignore newlines until "baseurl:"
+  SOMETHING HERE
+baseurl: "" # add /blog
+url: "FIX ME" # the base hostname & protocol for your site, e.g. http://example.com
+
+lang: en
+
+# Build settings
+markdown: kramdown
+timezone: America/Chicago
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+menu-pages:
+  - "about"
+  - "blog"
+  - "personal"

@@ -1,0 +1,61 @@
+.math-env {
+	padding-top: 28px;
+	padding-bottom: 25px;
+
+	background: color(theorem-background-color);
+	border-left: 5px solid color(theorem-border-color);
+	font-size: $base-font-size;
+
+	font-style: normal;
+
+	h5 {
+		margin-top: 0px;
+		margin-bottom: 15px;
+	}
+	p {
+		font-size: $base-font-size;
+		font-style: normal;
+	}
+
+	p:last-child {
+		margin-bottom: 0px;
+	}
+	p:first-child {
+		text-indent: 0px !important;
+	}
+}
+
+.math-ref-link {
+	background: none;
+	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+
+	border: 0px;
+	padding: 0px;
+
+	display: inline;
+
+	cursor: pointer;
+	color: color(brand-color);
+
+	&:hover {
+		color: color(text-color);
+		text-decoration: underline;
+	}
+}
+
+.math-env-proof {
+	p:first-child {
+		text-indent: 0px !important;
+	}
+	p:last-child {
+		position: relative;
+		&::after {
+ 	   	content: '\25FC'; /* QED symbol */
+			position: absolute;
+			right: 0px;
+			font-size: 0.9em;
+ 	 	}
+   	}
+
+}
+

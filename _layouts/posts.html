@@ -1,0 +1,72 @@
+---
+layout: default
+no_footnote_box: true;
+---
+
+{% include lang.html %}
+
+<h1 style="margin-bottom: 20px">{{ page.title }}</h1>
+
+<div class="post-details">
+	<div>
+		<div>
+			<!-- Posted -->
+			{{- site.data.locales[lang].post.posted -}} {{' '}}
+			<span class="post-detail-info">
+				{{' '}} {{page.date | date: "%B %d, %Y" }}
+			</span>
+		</div>
+		<div>
+			<!-- Modified -->
+		  	{% if page.revised %}
+				{{- site.data.locales[lang].post.updated -}}
+				<span class="post-detail-info">
+					{{' '}} {{page.revised | date: "%B %d, %Y" }}
+				</span>
+		  {% endif %}
+		</div>
+		<div>
+			<!-- Author -->
+			{{- site.data.locales[lang].post.written_by -}}
+			<span class="post-detail-info">{{' '}}{{page.author}} </span>
+
+			<span class="tag-wrapper">
+				{{- site.data.locales[lang].tabs.tags -}}{{ ' ' }}
+				{% for tag in page.tags %}
+				<span class="tag-box"> {{tag}} </span>
+				{% endfor %}
+			</span>
+
+		</div>
+	</div>
+
+	<div>
+		{% include read-time.html content=content prompt=true lang=lang %}
+	</div>
+</div>
+
+<div class="post-content">
+	{{ content }}
+
+
+	{% if page.footnotes%}
+	<div id="footnote-box"><strong>Enable JavaScript to view footnotes</strong></div>
+	{% endif %}
+
+	<div class="post-license-wrapper">
+		{% if site.data.locales[lang].copyright.license.template %}
+		  {% capture _replacement %}
+		<a href="{{ site.data.locales[lang].copyright.license.link }}">
+		  {{ site.data.locales[lang].copyright.license.name }}
+		</a>
+		{% endcapture %}
+		  {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+		{% endif %}
+	</div>
+</div>
+
+<!--
+{% if page.comments %}
+	{% include giscus.html %}
+{% endif %}
+-->

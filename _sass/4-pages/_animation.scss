@@ -1,0 +1,14 @@
+#webgl-alert {
+	display: none;
+}
+
+.animation-container {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	canvas {
+		max-width: 100%;
+	}
+}
