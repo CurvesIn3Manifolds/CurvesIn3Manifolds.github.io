@@ -16,6 +16,8 @@ about: >-
   1409 W Green st, <br>
   Urbana Il, 61801
 
+exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile']
+
 # Build settings
 markdown: kramdown
 timezone: America/Chicago
