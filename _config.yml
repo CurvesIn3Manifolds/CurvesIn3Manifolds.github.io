@@ -9,6 +9,13 @@ url: "FIX ME" # the base hostname & protocol for your site, e.g. http://example.
 
 lang: en
 
+name: >-
+  University of Illinois
+about: >-
+  Department of Mathematics <br>
+  1409 W Green st, <br>
+  Urbana Il, 61801
+
 # Build settings
 markdown: kramdown
 timezone: America/Chicago
@@ -16,11 +23,22 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+defaults:
+  - scope:
+      type: "posts"
+    values:
+      layout: "posts"
+      author: "Tyler Wang"
+      permalink: /posts/:year/:month/:day/:title/
+      comments: false
+      footnotes: true
+      tex: true
+      theorem: true
+
 sass:
   sass_dir: _sass
   style: compressed
 
 menu-pages:
-  - "about"
-  - "blog"
-  - "personal"
+  - "Gallery"
+  - "Package Info"
