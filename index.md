@@ -33,7 +33,7 @@ The fundamental group is this idea that one could take every loop within a topol
 It turns out, however, this process really only helps classify spaces which are in some sense "2-dimensional"; thus, to generalize this concept, we introduced the higher homotopy groups, which are constructed by considering all continuous maps of arbitrarily dimensioned spheres, $S^n$, into the space in question.
 Since when doing group algebra we generally don't assume commutativity, the classification process of arbitrary groups is not much easier than the original topological problem it tried to simplify.
 
-Here comes homology to help save the day.
+Herein comes homology to help save the day.
 Using homology, we can translate topological spaces to arbitrary groups, we translate them into *abelian* groups, which have the advantage of being commutative.
 It turns out being commutative makes all of the difference since with this additional piece of information, the classification problem becomes much simpler since a corollary of the structure theorem for finitely generated PID modules gives us a very nice way to classify these groups (again, don't worry if you don't know what this means).
 
