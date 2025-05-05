@@ -1,0 +1,104 @@
+---
+title: Photo
+lightbox: true
+layout: default
+permalink: /photo/
+jquery: true
+---
+
+{% include lang.html %}
+
+{% if page.comments %}
+<div style="border-bottom: var(--text-color) solid 1px; padding-bottom: 0.5em">
+{% else %}
+<div>
+{% endif %}
+	<!-- Load Image -->
+	<a id="link" class="photo-viewer-link"><img width="100%" id="image" class="photo-viewer-image" alt="image from album"/></a>
+	<script type="text/javascript">
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+		const imageURL = `{{site.url}}${urlParams.get('photo').replace(/\/+$/, "")}`;
+		const albumPath = `${urlParams.get('photo').replace(/\/+$/, "")}`;
+
+
+		var image = document.getElementById("image");
+		var link = document.getElementById("link");
+
+		image.setAttribute('src', imageURL);
+		link.setAttribute('href', imageURL);
+	</script>
+
+	<!-- Load Information -->
+	<div class="photo-viewer-information">
+		<div class="photo-viewer-first-row">
+			<h2 class="photo-viewer-title" id="image-title-box">
+				<span id="image-title"></span>
+			</h2>
+			<span class="tag-wrapper" id="image-tags">
+				{{- site.data.locales[lang].tabs.tags -}}{{" "}}
+			</span>
+		</div>
+		<p id="image-caption"></p>
+		<span class="photo-viewer-author">
+			<p id="image-datetime"></p>
+			<div>
+				{{- site.data.locales[lang].post.written_by -}}
+				<span class="photo-detail-info">{{' '}}Tyler Wang </span>
+			</div>
+		</span>
+	</div>
+
+	<div class="photo-license">
+		May not be redistributed without written consent of owner.
+	</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+<script type="text/javascript">
+	function getMetaData() {
+		let img = document.getElementById("image");
+
+		$.getJSON(`${imageURL.substring(0,imageURL.lastIndexOf("/"))}/album.json`, (data) => {
+			let filename = imageURL.substring(imageURL.lastIndexOf('/') + 1, imageURL.lastIndexOf('.'));
+
+			if (data?.album_title) {
+				$("#image-title-box").append(`<a id="image-album" href="/album?album=${albumPath.substring(0,albumPath.lastIndexOf("/"))}">
+					(${data?.album_title})</a>`);
+			}
+			if (data.images[filename]?.title) {
+				$("#image-title").html(data.images[filename]?.title);
+			}
+			if (data.images[filename]?.caption)
+				$("#image-caption").html(data.images[filename]?.caption);
+
+			if (data.images[filename]?.tags) {
+				let tags = data.images[filename]?.tags.split(' ');
+				tags.forEach((value) => {
+					$( '#image-tags' ).append(`<span class='tag-box'>${value}</span>`);
+				});
+			}
+
+		});
+
+		EXIF.getData(img, function () {
+			let date = Date.parse(EXIF.getTag(this, "DateTimeOriginal").split(' ')[0].replaceAll(":","-"));
+			let formatDate = new Date(date);
+
+			$("#image-datetime").html(`Taken <span class='photo-detail-info'>${formatDate.toLocaleDateString(
+				undefined, {
+  		 			year: 'numeric',
+  		 			month: 'long',
+  		 			day: 'numeric',
+					timeZone: 'UTC'
+				}
+			)}</span>`);
+		});
+	}
+
+	window.onload=getMetaData;
+</script>
+
+{% if page.comments %}
+	{% include giscus.html %}
+{% endif %}

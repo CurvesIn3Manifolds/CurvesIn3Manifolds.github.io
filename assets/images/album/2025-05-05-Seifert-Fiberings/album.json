@@ -1,0 +1,13 @@
+{
+  "album_title": "Seifert Fiberings",
+  "description": "FIX ME",
+  "tags": "math algebric-topology differential-topology",
+
+  "images": {
+	"test": {
+		"title": "exmaple",
+		"description": "Yes it works",
+		"tags": "Something"
+	}
+  }
+}
