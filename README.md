@@ -38,7 +38,7 @@ If we had in image that in a format other than JPG, we would append the followin
 "ex_img" : {
     "title": "example image",
     "description": "example description",
-    "tags": "tag1 tag2 tag-with-multiple-words"
+    "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "png"
 }
 ```
@@ -56,7 +56,7 @@ If we want to tag a video called `ex_video.webp`, we would add
 "ex_video" : {
     "title": "example video",
     "description": "example description",
-    "tags": "tag1 tag2 tag-with-multiple-words"
+    "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "webp"
 }
 ```
