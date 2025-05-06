@@ -62,7 +62,7 @@ If we want to tag a video called `ex_video.webp`, we would add
 ```
 
 ### Converting Videos
-To convert video files to WEBP, I recommend this (site)[https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.webp&outputOptions=-vcodec%20webp]
+To convert video files to WEBP, I recommend this [site](https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.webp&outputOptions=-vcodec%20webp)
 
 If ffmpeg is installed, then one could do the same operation with the following command:
 ```
