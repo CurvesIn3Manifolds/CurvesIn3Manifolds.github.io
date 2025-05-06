@@ -14,16 +14,22 @@ jquery: true
 <div>
 {% endif %}
 	<!-- Load Image -->
-	<a id="link" class="photo-viewer-link"><img width="100%" id="image" class="photo-viewer-image" alt="image from album"/></a>
+	<a id="link" class="photo-viewer-link"></a>
 	<script type="text/javascript">
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const imageURL = `{{site.url}}${urlParams.get('photo').replace(/\/+$/, "")}`;
 		const albumPath = `${urlParams.get('photo').replace(/\/+$/, "")}`;
+		const ext = imageURL.substring(imageURL.lastIndexOf(".") + 1);
 
+		var link = document.getElementById("link");
+
+		if(ext === "mov" || ext === "mp4")
+			link.innerHTML = `<video controls controlslist="nofullscreen" width="100%" id="image" class="photo-viewer-image" alt="image from album"></video>`;
+		else
+			link.innerHTML = `<img width="100%" id="image" class="photo-viewer-image" alt="image from album"/>`;
 
 		var image = document.getElementById("image");
-		var link = document.getElementById("link");
 
 		image.setAttribute('src', imageURL);
 		link.setAttribute('href', imageURL);
@@ -78,17 +84,19 @@ jquery: true
 		});
 
 		EXIF.getData(img, function () {
-			let date = Date.parse(EXIF.getTag(this, "DateTimeOriginal").split(' ')[0].replaceAll(":","-"));
+			let date = Date.parse(EXIF.getTag(this, "DateTimeOriginal")?.split(' ')[0].replaceAll(":","-"));
 			let formatDate = new Date(date);
 
-			$("#image-datetime").html(`Taken <span class='photo-detail-info'>${formatDate.toLocaleDateString(
-				undefined, {
-  		 			year: 'numeric',
-  		 			month: 'long',
-  		 			day: 'numeric',
-					timeZone: 'UTC'
-				}
-			)}</span>`);
+			if(date) {
+				$("#image-datetime").html(`Taken <span class='photo-detail-info'>${formatDate.toLocaleDateString(
+					undefined, {
+  			 			year: 'numeric',
+  			 			month: 'long',
+  			 			day: 'numeric',
+						timeZone: 'UTC'
+					}
+				)}</span>`);
+			}
 		});
 	}
 
