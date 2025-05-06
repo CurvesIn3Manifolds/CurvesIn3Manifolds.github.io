@@ -1,11 +1,11 @@
-title: FIX ME
-site-title: FIX ME
+title: Visualization of Seifert Fiberings
+site-title: Visualization of Seifert Fiberings
 subtitle: >- # this means to ignore newlines until "baseurl:"
-  FIX ME
+  Visualization of Seifert Fiberings
 description: >- # this means to ignore newlines until "baseurl:"
-  SOMETHING HERE
+  FIX ME
 baseurl: "" # add /blog
-url: "FIX ME" # the base hostname & protocol for your site, e.g. http://example.com
+url: "htttps://curvesin3manifolds.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
 lang: en
 
