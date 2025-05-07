@@ -14,16 +14,16 @@
 
     "cos_animation" : {
 
-    "title": "example video",
-    "description": "example description",
+    "title": "Trivial Fibering Animation",
+    "description": "Animation of trivial loop expanding to straight line",
     "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "webp"
     },
 
     "cos_animation_rev" : {
 
-    "title": "example video",
-    "description": "example description",
+    "title": "Trivial Fibering Animation With Reverse",
+    "description": "Same as Trivial Fibering Animation, straight line shrinks back to a point",
     "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "webp"
     },
