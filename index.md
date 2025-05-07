@@ -1,13 +1,38 @@
 ---
 layout: default
 ---
-# This is a title
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+# Curves In 3-Manifolds
 
-## This is a Subtitle
+Welcome!
+You made it through the maze of Ruby and Jekyll setup - that’s no small feat!
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+Now you’re all set to explore some awesome geometry!
+Play around, break things, and enjoy building your own world of curves and shapes!
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+{% raw %}
+<video width="640" height="360" controls>
+  <source src="assets/animation_final.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+{% endraw %}
+
+## Introduction
+
+This project looks at how loops behave in certain spaces by creating visual representations.
+In particular, we focus on a space called the Seifert fiberings of $S^2 \times S^1$, which is related to the loop space of the rotation group $SO(3)$.
+Although algebraic concepts like homology can describe these spaces, they are often hard to understand just by reading formulas or definitions.
+
+To make these ideas more accessible, we use visualizations to show how the basic shapes, or generators, of these spaces look.
+Instead of using only abstract calculations, we show how these curves appear when placed inside the familiar space $S^2 \times S^1$.
+Our goal is to give people a more intuitive and concrete way to explore and understand the structure of these loops.
+
+## More Information
+
+You can explore more at our [GitHub repository](https://github.com/CurvesIn3Manifolds/CurvesIn3Manifolds.github.io)!
+
+
+### Reference
+
+[Yi Wang and Jingye Yang. On the homotopy type of the space of fiberings of $S^1 \times S^2$ by simple closed curves. arXiv preprint,
+arXiv:2404.08545, (2024).](https://arxiv.org/html/2404.08545v1)
