@@ -1,5 +1,6 @@
 ---
 layout: default
+tex: true
 ---
 
 # Curves In 3-Manifolds
