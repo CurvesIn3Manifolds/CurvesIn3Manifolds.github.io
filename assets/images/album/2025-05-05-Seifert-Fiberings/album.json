@@ -6,33 +6,30 @@
   "images": {
 
     "ExpandingLoops" : {
-    "title": "example video",
-    "description": "example description",
-    "tags": "tag1 tag2 tag-with-multiple-words",
+    "title": "Trivial loop and Siefert fibering",
+    "description": "Continuous deformation of the trivial loop into other loops and the corresponding fibration",
+    "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "cos_animation" : {
-
     "title": "Trivial Fibering Animation",
     "description": "Animation of trivial loop expanding to straight line",
-    "tags": "tag1 tag2 tag-with-multiple-words",
+    "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "cos_animation_rev" : {
-
     "title": "Trivial Fibering Animation With Reverse",
     "description": "Same as Trivial Fibering Animation, straight line shrinks back to a point",
-    "tags": "tag1 tag2 tag-with-multiple-words",
+    "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "NontrivialLoopRandomPath" : {
-
-    "title": "example video",
-    "description": "example description",
-    "tags": "tag1 tag2 tag-with-multiple-words",
+    "title": "Non-trivial loop",
+    "description": "Continuous deformation (rotation) of the curve and its corresponding fibration",
+    "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     }
   }
