@@ -5,11 +5,10 @@ tex: true
 
 # Curves In 3-Manifolds
 
-Welcome!
-You made it through the maze of Ruby and Jekyll setup - that’s no small feat!
+Welcome!  
 
-Now you’re all set to explore some awesome geometry!
-Play around, break things, and enjoy building your own world of curves and shapes!
+This site is a place to explore beautiful ideas in geometry and topology - discover loops, structures, and visual ways to understand complicated spaces!  
+We hope you enjoy playing with the curves and seeing math come to life!
 
 {% raw %}
 <video width="640" height="360" controls>
