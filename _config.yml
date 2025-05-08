@@ -16,7 +16,7 @@ about: >-
   1409 W Green st, <br>
   Urbana Il, 61801
 
-exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile']
+exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile', 'blog.md']
 
 # Build settings
 markdown: kramdown
