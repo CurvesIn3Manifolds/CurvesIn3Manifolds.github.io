@@ -13,7 +13,7 @@ Once done so, we should append the following code in `album.json` in the `images
 ```
 "ex_img" : {
     "title": "example image",
-    "description": "example description",
+    "caption": "example description",
     "tags": "tag1 tag2 tag-with-multiple-words"
 }
 ```
@@ -27,7 +27,7 @@ Thus, if `ex_img.jpg` were the only image, the entire album file would look as f
 
     "ex_img" : {
         "title": "example image",
-        "description": "example description",
+        "caption": "example description",
         "tags": "tag1 tag2 tag-with-multiple-words"
     }
 }
@@ -37,7 +37,7 @@ If we had in image that in a format other than JPG, we would append the followin
 ```
 "ex_img" : {
     "title": "example image",
-    "description": "example description",
+    "caption": "example description",
     "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "png"
 }
@@ -55,7 +55,7 @@ If we want to tag a video called `ex_video.webp`, we would add
 ```
 "ex_video" : {
     "title": "example video",
-    "description": "example description",
+    "caption": "example description",
     "tags": "tag1 tag2 tag-with-multiple-words",
     "ext": "webp"
 }

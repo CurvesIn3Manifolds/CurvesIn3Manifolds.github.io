@@ -1,34 +1,34 @@
 {
   "album_title": "Seifert Fiberings",
-  "description": "FIX ME",
+  "description": "Here, we've included a collection of images we've generated over the course of a semester.",
   "tags": "math algebric-topology differential-topology",
 
   "images": {
 
     "ExpandingLoops" : {
     "title": "Trivial loop and Siefert fibering",
-    "description": "Continuous deformation of the trivial loop into other loops and the corresponding fibration",
+    "caption": "Continuous deformation of the trivial loop into other loops and the corresponding fibration",
     "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "cos_animation" : {
     "title": "Trivial Fibering Animation",
-    "description": "Animation of trivial loop expanding to straight line",
+    "caption": "Animation of trivial loop expanding to straight line",
     "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "cos_animation_rev" : {
     "title": "Trivial Fibering Animation With Reverse",
-    "description": "Same as Trivial Fibering Animation, straight line shrinks back to a point",
+    "caption": "Same as Trivial Fibering Animation, straight line shrinks back to a point",
     "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     },
 
     "NontrivialLoopRandomPath" : {
     "title": "Non-trivial loop",
-    "description": "Continuous deformation (rotation) of the curve and its corresponding fibration",
+    "caption": "Continuous deformation (rotation) of the curve and its corresponding fibration",
     "tags": "math homotopy seifert-fibering",
     "ext": "webp"
     }

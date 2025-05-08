@@ -77,7 +77,7 @@ If we sit and ponder this for a minute, we should be able to see that we can ide
 Taking some inspiration from this construction of the torus, let's construct $S^2\times S^1$ in the following way:
 Start with a solid ball with a cavity at the center.
 Then we can see that each point can be completely identified by $(t,s)$, where $t$ is a point on the inner sphere and $s$ as the distance from the origin.
-Effectively, what we have here is $S^2 \times I$, where $I$ is the interval between the two spheres.
+Effectively, what we have here is $S^2 \times I,$ where $I$ is the interval between the two spheres.
 Then, if we identify points that lie on the same ray starting at the origin, we get $S^2 \times S^1$.
 
 It may seem immediately obvious that this manifold is not embeddable into 3-space, thus making it impossible to visualize (at least intuitively).
@@ -207,11 +207,15 @@ The immediate result of this observation if that $H_n(SF^N)$ and $H_n(SF^T)$ are
 In the remainder of this article we will focus on when $n=2$ and try to interpret these results from a more visual approach.
 For a more analytical analysis, I will refer you to [WY24, Section IV].
 
+## The Animations
+Now, we have finally reached the section where we can talk about the animations.
+
+To actually realize loops in $\rp^3$ in $S^2\times S^1$, we need 
 
 
 ## Formal Discussion
 Now this is the inevitable part of the article were we have a formal discussion about the math.
-If you are someone who doesn't have much math experience (or just someone that gets bored in math class), feel free to skip this section, as this section is for the people who might be interested in the more formal mathematics under the curtain.
+If you are someone who doesn't have much math experience (or just someone that gets bored in math class), this section might feel slightly out of reach, but I chose to include it for the people who might be interested in the more formal mathematics under the curtain.
 
 To formalize $\sym{SF}(S^2 \times S^1,T)$, let's denote the set of all diffeomorphism of $S^2 \times S^1$ to itself by $\sym{Diff}(S^2 \times S^1)$.
 Since the fiberings we are interested in all differ from $T$ by some diffeomorphism, $\sym{Diff}(S^2 \times S^1) \cdot T$, the set of all fiberings that are images under some diffeomorphism, contains all such fiberings.
@@ -231,8 +235,6 @@ $$\sym{SF}(S^2 \times S^1, T):=\sym{Diff}(S^2 \times S^1)/\sym{Aut}(T).$$
 Now, the advantage having this group definition of $\sym{SF}(S^2\times S^1)$, since $\sym{Diff}(S^2\times S^1)$ is just some space of functions, we can choose from a number of topologies to put on this set depending on what properties we'd like to have.
 For our purposes, we will chose the *compact open topology* thus let $\sym{SF}(S^2\times S^1,T)$ be the coset space of $\sym{Diff}(S^2\times S^1)$.
 
-
-## The Animations
 
 ## References
 <p style="text-indent: -50px; padding-left: 50px">
