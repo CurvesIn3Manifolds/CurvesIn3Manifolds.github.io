@@ -33,10 +33,21 @@ Our goal is to give people a more intuitive and concrete way to explore and unde
 
 You can explore more at our [GitHub repository](https://github.com/CurvesIn3Manifolds/CurvesIn3Manifolds.github.io)!
 
+Also check out our [Blog](https://curvesin3manifolds.github.io/blog) and [Album](https://curvesin3manifolds.github.io/album/) for highlights!
+
 
 ### Reference
 
 Yi Wang and Jingye Yang. *On the homotopy type of the space of fiberings of* $S^1 \times S^2$ *by simple closed curves.* [arXiv preprint,
 arXiv:2404.08545, (2024).](https://arxiv.org/html/2404.08545v1)
 
+
+<hr style="margin-top: 3em;">
+
+<p style="font-size: 0.8em; text-align: center; color: gray;">
+  © 2025 · This project was completed as part of the 
+  <a href="https://iml.math.illinois.edu/">
+    Illinois Mathematics Lab (IML)
+  </a> at the University of Illinois Urbana-Champaign.
+</p>
 
