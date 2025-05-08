@@ -11,9 +11,6 @@ Welcome!
 This site is a place to explore beautiful ideas in geometry and topology - discover loops, structures, and visual ways to understand complicated spaces!  
 We hope you enjoy playing with the curves and seeing math come to life!
 
-This site is a place to explore beautiful ideas in geometry and topology - discover loops, structures, and visual ways to understand complicated spaces!  
-We hope you enjoy playing with the curves and seeing math come to life!
-
 
 
 <video width="640" height="360" autoplay muted loop playsinline>
