@@ -52,9 +52,15 @@
 	  {%- include google-analytics.html -%}
 	{%- endif -%}
 
+
+	<!-- Theorems -->
+	{% if page.theorem %}
+		<script src='{{site.baseurl}}/js/theorem.js' defer></script>
+	{% endif %}
+
 	<!-- Footnotes -->
 	{% if page.footnotes %}
-		<script type="text/javascript" src="{{site.baseurl}}/js/footnote.js"></script>
+		<script type="text/javascript" src="{{site.baseurl}}/js/footnote.js" defer></script>
 	{% endif %}
 
 	<!-- Lightbox -->
@@ -65,10 +71,6 @@
 
 	{% if page.jquery %}
 		<script src="//code.jquery.com/jquery-2.1.0.js"></script>
-	{% endif %}
-
-	{% if page.theorem %}
-		<script src='{{site.baseurl}}/js/theorem.js' defer></script>
 	{% endif %}
 
 	<!-- MathJax -->
@@ -112,7 +114,9 @@
 						deval: ["{\\bigg|_{#1}}" ,1],
 
 						diff: ["{\\frac{d#1}{d#2}}", 2],
-						pdiff: ["{\\frac{\\partial#1}{\\partial#2}}", 2]
+						pdiff: ["{\\frac{\\partial#1}{\\partial#2}}", 2],
+
+						sym: ["{\\text{#1}}", 1]
 					}
 				},
 				loader: {load: ['ui/menu', '[tex]/ams','[tex]/configmacros']},
