@@ -5,21 +5,13 @@ tex: true
 
 # Curves In 3-Manifolds
 
-Welcome!  
+This site is a place to explore beautiful ideas in geometry and topology - discover loops, structures, and visual ways to understand complicated spaces!
 
-
-This site is a place to explore beautiful ideas in geometry and topology - discover loops, structures, and visual ways to understand complicated spaces!  
-We hope you enjoy playing with the curves and seeing math come to life!
-
-
-
-<video width="640" height="360" autoplay muted loop playsinline>
-  <source src="{{ site.baseurl }}/assets/animation_final.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
-## Introduction
+<div style="display: flex; justify-content: center">
+    <video width="640" height="360" autoplay muted loop playsinline style="max-width: 100%; display: flex; justify-content: center;" alt="Video of loop deforming in sphere">
+      <source src="{{ site.baseurl }}/assets/animation_final.mp4" type="video/mp4">
+    </video>
+</div>
 
 This project looks at how loops behave in certain spaces by creating visual representations.
 In particular, we focus on a space called the Seifert fiberings of $S^2 \times S^1$, which is related to the loop space of the rotation group $SO(3)$.
@@ -29,25 +21,17 @@ To make these ideas more accessible, we use visualizations to show how the basic
 Instead of using only abstract calculations, we show how these curves appear when placed inside the familiar space $S^2 \times S^1$.
 Our goal is to give people a more intuitive and concrete way to explore and understand the structure of these loops.
 
+The results displayed on this site are largely outlined in this [paper](https://arxiv.org/abs/2404.08545).
+
 ## More Information
 
-You can explore more at our [GitHub repository](https://github.com/CurvesIn3Manifolds/CurvesIn3Manifolds.github.io)!
+For an introductory explanation of these animations, refer to this [article]({{site.baseurl}}/blog).
 
-Also check out our [Blog](https://curvesin3manifolds.github.io/blog) and [Album](https://curvesin3manifolds.github.io/album/) for highlights!
+Additionally, you can find in this [album]({{site.baseulr}}/album) a collection of all the images we've generated over the course of a semester.
 
+You can also find the code to generate some images on your own in this [GitHub repository](https://github.com/figure-eight-m4a1/curvesin3manifolds).
 
-### Reference
+## Acknowledgments
 
-Yi Wang and Jingye Yang. *On the homotopy type of the space of fiberings of* $S^1 \times S^2$ *by simple closed curves.* [arXiv preprint,
-arXiv:2404.08545, (2024).](https://arxiv.org/html/2404.08545v1)
-
-
-<hr style="margin-top: 3em;">
-
-<p style="font-size: 0.8em; text-align: center; color: gray;">
-  © 2025 · This project was completed as part of the 
-  <a href="https://iml.math.illinois.edu/">
-    Illinois Mathematics Lab (IML)
-  </a> at the University of Illinois Urbana-Champaign.
-</p>
+This project was completed in part with the [Illinois Mathematics Lab](https://iml.math.illinois.edu/) at the University of Illinois Urbana-Champaign.
 
