@@ -16,8 +16,8 @@ We hope you enjoy playing with the curves and seeing math come to life!
 
 
 
-<video width="640" height="360" autoplay muted playsinline>
-  <source src="/assets/animation_final.mp4" type="video/mp4">
+<video width="640" height="360" autoplay muted loop playsinline>
+  <source src="{{ site.baseurl }}/assets/animation_final.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
