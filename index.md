@@ -36,7 +36,7 @@ You can explore more at our [GitHub repository](https://github.com/CurvesIn3Mani
 
 ### Reference
 
-Yi Wang and Jingye Yang. On the homotopy type of the space of fiberings of $S^1 \times S^2$ by simple closed curves. [arXiv preprint,
+Yi Wang and Jingye Yang. *On the homotopy type of the space of fiberings of $S^1 \times S^2$ by simple closed curves.* [arXiv preprint,
 arXiv:2404.08545, (2024).](https://arxiv.org/html/2404.08545v1)
 
 
