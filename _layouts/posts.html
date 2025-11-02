@@ -27,8 +27,10 @@ no_footnote_box: true;
 		</div>
 		<div>
 			<!-- Author -->
+			{% if page.author %}
 			{{- site.data.locales[lang].post.written_by -}}
 			<span class="post-detail-info">{{' '}}{{page.author}} </span>
+			{% endif %}
 
 			<span class="tag-wrapper">
 				{{- site.data.locales[lang].tabs.tags -}}{{ ' ' }}

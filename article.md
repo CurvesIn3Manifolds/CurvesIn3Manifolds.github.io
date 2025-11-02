@@ -8,8 +8,8 @@ tags:
   - math
   - algebraic topology
   - differential topology
-author: Amarisa Chalermratananon, Cathy Guo, Gabe Lewis, Shana Li, Tyler Wang, Yi Wang
 date: 2025-05-6
+revised: 2025-11-15
 
 footnotes: true
 tex: true

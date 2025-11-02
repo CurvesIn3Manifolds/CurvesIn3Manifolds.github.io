@@ -42,6 +42,5 @@ sass:
   style: compressed
 
 menu-pages:
-  - "blog"
+  - "article"
   - "album"
-  - "download"
